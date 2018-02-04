@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="username_filler">שם משתמש</string>
+    <string name="ask_hint">מה תרצה לשאול?</string>
+    <string name="recipients_hint">את מי אתה רוצה לשאול?</string>
+    <string name="friends_search_hint">הקלד שמות חברים</string>
+    <string name="inflate_text">נםח</string>
+    <string name="question_filler">תכולת שאלה</string>
+    <string name="yes_button">כן</string>
+    <string name="no_button">לא</string>
+    <string name="time_filler">זמן לא ידוע</string>
+    <string name="friends_text">חברים</string>
+    <string name="your_answer_text">אתה אמרת</string>
+    <string name="custom">מסויימת</string>
+    <string name="yes_no">כן/לא</string>
+    <string name="image">תמונה</string>
+</resources>

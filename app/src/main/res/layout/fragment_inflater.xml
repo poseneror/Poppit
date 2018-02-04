@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dp"
+    android:background="#ffffff"
+    style="@style/Box">
+    <com.facebook.login.widget.ProfilePictureView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/inflater_profile_picture"
+        android:layout_marginRight="5dp">
+
+    </com.facebook.login.widget.ProfilePictureView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username_filler"
+        android:id="@+id/user_name"
+        android:layout_alignTop="@+id/inflater_profile_picture"
+        android:layout_toRightOf="@+id/inflater_profile_picture"
+        android:layout_toEndOf="@+id/inflater_profile_picture"
+        style="@style/UserName"
+        android:gravity="center_vertical" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_box"
+        android:layout_below="@+id/user_name"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_alignStart="@+id/user_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/ask_hint" />
+
+    <TextView
+        style="@style/PlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This question will refer to:"
+        android:id="@+id/who_text"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:layout_above="@+id/recipients_grid"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/recipients_grid"
+        android:background="#eeeeee"
+        android:columnWidth="40dp"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/edit_recipients_button"
+        android:layout_toLeftOf="@+id/edit_recipients_button" />
+
+    <Button
+        style="@style/InflateButton"
+        android:text="@string/inflate_text"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_pop_question"
+        android:layout_above="@+id/who_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="@style/OptionButton"
+        android:text="Edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_recipients_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+        <include
+            layout="@layout/module_inflater_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/include"
+            android:layout_below="@+id/module_selector"
+            android:layout_alignRight="@+id/question_box"
+            android:layout_alignEnd="@+id/question_box" />
+    <RadioGroup
+        android:id="@+id/module_selector"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_box"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes_no"
+            android:id="@+id/module_selector_yn"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom"
+            android:id="@+id/module_selector_custom" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image"
+            android:id="@+id/module_selector_image" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="This is a followUp for:"
+        android:id="@+id/followup_text"
+        android:layout_above="@+id/btn_pop_question"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="followup content"
+        android:id="@+id/followup_question"
+        android:layout_alignTop="@+id/btn_pop_question"
+        android:layout_above="@+id/who_text"
+        android:layout_toLeftOf="@+id/btn_pop_question"
+        android:layout_toEndOf="@+id/user_name"
+        android:layout_alignLeft="@+id/who_text"
+        android:layout_alignStart="@+id/who_text"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

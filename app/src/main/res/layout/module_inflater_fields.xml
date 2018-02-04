@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fields_flipper"
+        android:layout_below="@+id/question_box"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                style="@style/YesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inflater_field_yes"
+                android:text="@string/yes_button"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/inflater_field_no"
+                android:layout_toStartOf="@+id/inflater_field_no"
+                android:layout_marginRight="13dp"
+                android:layout_marginEnd="13dp"
+                android:clickable="false"/>
+
+            <Button
+                style="@style/NoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/inflater_field_no"
+                android:text="@string/no_button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:clickable="false"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/inflater_field_first_option_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="Type your first option..."
+                android:background="@color/poppit_indigo_dark"
+                android:textColor="@color/poppit_white"
+                android:textColorHint="@color/poppit_white"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/inflater_field_second_option_text"
+                android:hint="Type your second option..."
+                android:layout_below="@+id/inflater_field_first_option_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:background="@color/poppit_indigo_dark"
+                android:textColor="@color/poppit_white"
+                android:textColorHint="@color/poppit_white"
+                android:paddingLeft="10dp"
+                android:layout_marginBottom="10dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/first_option_image"
+                android:src="@drawable/bubble"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:id="@+id/second_option_image"
+                android:src="@drawable/bubble"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/first_option_image"
+                android:layout_toEndOf="@+id/first_option_image" />
+            <ImageButton
+                android:src="@android:drawable/ic_input_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/first_img_select_button"
+                android:layout_alignTop="@+id/first_img_capture_button"
+                android:layout_alignLeft="@+id/first_option_image"/>
+
+            <ImageButton
+                android:src="@android:drawable/ic_menu_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/first_img_capture_button"
+                android:layout_alignTop="@+id/second_img_select_button"
+                android:layout_toRightOf="@+id/first_img_select_button"
+                android:layout_toStartOf="@+id/second_img_select_button"
+                android:layout_alignRight="@+id/first_option_image"
+                android:layout_alignEnd="@+id/first_option_image" />
+
+            <ImageButton
+                android:src="@android:drawable/ic_input_get"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/second_img_select_button"
+                android:layout_alignTop="@+id/second_img_capture_button"
+                android:layout_toLeftOf="@+id/second_img_capture_button"
+                android:layout_alignLeft="@+id/second_option_image"
+                android:layout_alignStart="@+id/second_option_image" />
+
+            <ImageButton
+                android:src="@android:drawable/ic_menu_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/second_img_capture_button"
+                android:layout_below="@+id/second_option_image"
+                android:layout_alignRight="@+id/second_option_image" />
+
+        </RelativeLayout>
+    </ViewFlipper>
+
+
+
+
+</RelativeLayout>

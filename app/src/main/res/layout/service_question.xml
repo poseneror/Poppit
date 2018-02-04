@@ -1,0 +1,78 @@
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    tools:context="posener.quicker.QuestionDisplay"
+    android:background="@color/poppit_white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publisher"
+        android:id="@+id/li_q_publisher"
+        style="@style/UserName"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/li_q_profile_picture"
+        android:layout_toEndOf="@+id/li_q_profile_picture" />
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Question content"
+        android:id="@+id/li_q_content"
+        style="@style/PlainText"
+        android:gravity="top"
+            android:layout_below="@+id/li_q_publisher"
+            android:layout_toRightOf="@+id/li_q_profile_picture"
+            android:layout_toEndOf="@+id/li_q_profile_picture" />
+    <view class="posener.poppit.views.RoundProfilePictureView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/li_q_profile_picture"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/time_filler"
+        android:id="@+id/li_q_date"
+        style="@style/PublishDate"
+        android:layout_above="@+id/li_q_content"
+        android:layout_toRightOf="@+id/li_q_publisher"
+        android:layout_toEndOf="@+id/li_q_publisher"/>
+    </RelativeLayout>
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/modules_flipper"
+        android:layout_below="@+id/li_q_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <include layout="@layout/module_yes_no" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <include layout="@layout/module_custom" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <include layout="@layout/module_image" />
+        </RelativeLayout>
+
+    </ViewFlipper>
+</LinearLayout>

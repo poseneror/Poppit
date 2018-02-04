@@ -1,0 +1,128 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/poppit_indigo</item>
+        <item name="colorPrimaryDark">@color/poppit_indigo_dark</item>
+        <item name="colorAccent">@color/poppit_orange</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+    
+    <style name="Feed" parent="CardView">
+        <item name="android:layout_margin">8dp</item>
+        <item name="cardCornerRadius">4dp</item>
+        <item name="cardElevation">3dp</item>
+        <item name="cardBackgroundColor">@color/poppit_white</item>
+    </style>
+    
+    <style name="Box">
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="UserName" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/poppit_indigo_dark</item>
+
+    </style>
+    <style name="Question" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/poppit_indigo_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="PlainText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/poppit_gery</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="LightText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/poppit_white</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+    <style name="TitleText" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/poppit_indigo</item>
+        <item name="android:textStyle">bold</item>
+        </style>
+
+    <style name="OptionButton" parent="Widget.AppCompat.Button.Small">
+        <item name="android:textColor">@color/poppit_white</item>
+        <item name="android:background">@color/poppit_indigo</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HeaderText" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/poppit_white</item>
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="YesButton" parent="Widget.AppCompat.Button.Small">
+        <item name="android:textColor">@color/poppit_white</item>
+        <item name="android:background">@color/poppit_green</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="NoButton" parent="Widget.AppCompat.Button.Small">
+        <item name="android:textColor">@color/poppit_white</item>
+        <item name="android:background">@color/poppit_red</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CustomButton" parent="Widget.AppCompat.Button.Small">
+        <item name="android:textColor">@color/poppit_white</item>
+        <item name="android:background">@color/poppit_indigo_light</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="InflateButton" parent="Widget.AppCompat.Button.Small">
+        <item name="android:textColor">@color/poppit_white</item>
+        <item name="android:background">@color/poppit_green</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="LinkButton" parent="Widget.AppCompat.Button.Small">
+        <item name="android:textColor">@color/poppit_white</item>
+        <item name="android:background">@color/poppit_indigo</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    <style name="SelectButton" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/poppit_gery</item>
+        <item name="android:background">@color/poppit_white</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="PublishDate" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/poppit_orange</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <style name="QuestionList" parent="Base.Widget.AppCompat.ListView">
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">10dp</item>
+    </style>
+    
+    <style name="YBar" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/yes_bar</item>
+    </style>
+    <style name="NBar" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/no_bar</item>
+    </style>
+    <style name="MixedBar" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/yes_bar</item>
+        <item name="android:background">@color/poppit_red</item>
+        <item name="android:minHeight">70dp</item>
+    </style>
+
+    <style name="BorderImage">
+        <item name="android:padding">2dp</item>
+        <item name="android:cropToPadding">true</item>
+        <item name="android:background">@drawable/image_border</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+</resources>

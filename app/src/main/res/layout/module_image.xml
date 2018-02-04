@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+    <TextView android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Pick one"
+        android:layout_alignParentTop="true"
+        android:id="@+id/pick_hint"
+        style="@style/TitleText"/>
+            <com.parse.ParseImageView
+                style="@style/BorderImage"
+                android:src="@drawable/bubble"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/module_image_fo"
+                android:layout_below="@+id/pick_hint"
+                android:layout_alignParentLeft="true"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="10dp"/>
+            <TextView android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="OR"
+                style="@style/Question"
+                android:layout_alignTop="@+id/module_image_fo"
+                android:layout_toLeftOf="@+id/module_image_so"
+                android:layout_toRightOf="@+id/module_image_fo"
+                android:layout_alignBottom="@+id/module_image_fo"
+                android:gravity="center"
+                android:id="@+id/question_option_divider" />
+            <com.parse.ParseImageView
+                style="@style/BorderImage"
+                android:src="@drawable/bubble"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/module_image_so"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/module_image_fo"
+                android:scaleType="centerCrop" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_fo_zoom"
+        android:src="@drawable/abc_ic_search_api_mtrl_alpha"
+        android:layout_below="@+id/module_image_fo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/module_image_fo"
+        android:layout_alignEnd="@+id/module_image_fo" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_so_zoom"
+        android:src="@drawable/abc_ic_search_api_mtrl_alpha"
+        android:layout_alignTop="@+id/question_fo_zoom"
+        android:layout_alignRight="@+id/module_image_so"
+        android:layout_alignEnd="@+id/module_image_so" />
+</RelativeLayout>

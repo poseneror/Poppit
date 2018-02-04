@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+            <Button
+                style="@style/CustomButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/module_custom_fo"
+                android:text="first option"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"/>
+            <Button
+                style="@style/CustomButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/module_custom_so"
+                android:text="second option"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/module_custom_fo"
+                android:layout_alignLeft="@+id/module_custom_fo"
+                android:layout_marginTop="5dp"/>
+</RelativeLayout>

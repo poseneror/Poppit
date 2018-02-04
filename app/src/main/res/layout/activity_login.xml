@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="posener.poppit.activities.LoginActivity"
+    android:background="@color/poppit_indigo">
+    <TextView
+        style="@style/HeaderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to POPPIT!"
+        android:id="@+id/login_welcome_message"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <ViewFlipper
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_view_flipper"
+        android:layout_alignParentBottom="true">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/poppit_white"
+        android:paddingTop="15dp"
+        android:id="@+id/linearLayout">
+        <TextView
+            style="@style/PlainText"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please login via Facebook!"
+            android:id="@+id/login_instructions"
+            android:paddingBottom="15dp"/>
+        <Button
+            style="@style/com_facebook_loginview_default_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login through FACEBOOK!"
+            android:onClick="onLoginClick"
+            android:id="@+id/button"/>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@color/poppit_white"
+        android:paddingTop="15dp"
+        android:id="@+id/login_loading_view"
+        android:visibility="visible">
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login_loading_progress"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+    </ViewFlipper>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/splash"
+        android:cropToPadding="true"
+        android:scaleType="centerCrop"
+        android:layout_alignLeft="@+id/login_view_flipper"
+        android:layout_alignStart="@+id/login_view_flipper"
+        android:layout_below="@+id/login_welcome_message" />
+
+
+</RelativeLayout>

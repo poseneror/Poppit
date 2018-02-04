@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <include layout="@layout/notification_view_results" />
+    <ProgressBar
+    style="@style/YBar"
+    android:layout_width="150dp"
+    android:layout_height="25dp"
+    android:id="@+id/not_first_bar"
+    android:progress="100"
+    android:layout_below="@+id/not_header"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="10dp"
+    android:max="100" />
+
+<ProgressBar
+    style="@style/NBar"
+    android:layout_width="150dp"
+    android:layout_height="25dp"
+    android:id="@+id/not_second_bar"
+    android:progress="100"
+    android:indeterminate="false"
+    android:layout_below="@+id/not_first_bar"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginTop="12dp"
+    android:max="100" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="@string/friends_text"
+    android:id="@+id/not_first_answered"
+    android:layout_alignTop="@+id/not_first_bar"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignBottom="@+id/not_first_bar"
+    style="@style/LightText"
+    android:layout_alignRight="@+id/not_first_bar"
+    android:layout_alignEnd="@+id/not_first_bar"
+    android:gravity="center_vertical|left"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="@string/friends_text"
+    android:id="@+id/not_second_answered"
+    android:layout_alignBottom="@+id/not_second_bar"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignTop="@+id/not_second_bar"
+    android:layout_alignRight="@+id/not_second_bar"
+    android:layout_alignEnd="@+id/not_second_bar"
+    style="@style/LightText"
+    android:gravity="center_vertical|left"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" />
+
+<TextView
+    style="@style/NotificationContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="xx%"
+    android:id="@+id/not_first_percent"
+    android:gravity="center_vertical"
+    android:layout_alignTop="@+id/not_first_bar"
+    android:layout_toRightOf="@+id/not_first_bar"
+    android:layout_toEndOf="@+id/not_first_bar"
+    android:layout_above="@+id/not_second_bar" />
+
+<TextView
+    style="@style/NotificationContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="xx%"
+    android:id="@+id/not_second_percent"
+    android:gravity="center_vertical"
+    android:layout_alignTop="@+id/not_second_bar"
+    android:layout_toRightOf="@+id/not_second_bar"
+    android:layout_toEndOf="@+id/not_second_bar"
+    android:layout_alignBottom="@+id/not_second_bar" />
+</RelativeLayout>
+

@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <view class="posener.poppit.views.RoundProfilePictureView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/li_q_profile_picture"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username_filler"
+        android:id="@+id/li_q_publisher"
+        android:layout_alignTop="@+id/li_q_profile_picture"
+        android:layout_toRightOf="@+id/li_q_profile_picture"
+        android:layout_marginTop="7dp"
+        style="@style/UserName"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/question_filler"
+        android:id="@+id/li_q_content"
+        android:layout_below="@+id/li_q_publisher"
+        android:layout_alignLeft="@+id/li_q_publisher"
+        style="@style/Question"
+        android:gravity="top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="@string/time_filler"
+    android:id="@+id/li_q_date"
+    style="@style/PublishDate"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentTop="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TIE BREAKER!"
+        android:id="@+id/question_tiebreaker"
+        style="@style/TitleText"
+        android:layout_below="@+id/li_q_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/li_q_publisher"
+        android:layout_toEndOf="@+id/li_q_publisher" />
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="poppit_indigo">#2b5166</color>
+    <color name="poppit_orange">#fab243</color>
+    <color name="poppit_indigo_light">#ff8ca7b8</color>
+    <color name="poppit_indigo_dark">#482344</color>
+    <color name="poppit_white">#ffffff</color>
+    <color name="poppit_red">#e02130</color>
+    <color name="poppit_green">#429867</color>
+    <color name="poppit_gery">#373737</color>
+    <color name="poppit_light_grey">#ffebebeb</color>
+    <color name="poppit_light_green">#ffe1ffd9</color>
+</resources>

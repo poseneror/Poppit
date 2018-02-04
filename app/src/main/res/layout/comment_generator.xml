@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <view class="posener.poppit.views.RoundProfilePictureView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/comment_profile_picture"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username_filler"
+        android:id="@+id/comment_username"
+        android:layout_alignTop="@+id/comment_profile_picture"
+        android:layout_toRightOf="@+id/comment_profile_picture"
+        style="@style/UserName"
+        android:textSize="12dp"
+        android:gravity="center_vertical" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="your comment here..."
+        android:id="@+id/comment_box"
+        android:layout_below="@+id/comment_username"
+        android:layout_alignLeft="@+id/comment_username"
+        style="@style/PlainText"
+        android:gravity="top"
+        android:textSize="12dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:id="@+id/comment_submit"
+        android:layout_below="@+id/comment_box"
+        android:layout_alignRight="@+id/comment_box"
+        android:layout_alignEnd="@+id/comment_box" />
+</RelativeLayout>

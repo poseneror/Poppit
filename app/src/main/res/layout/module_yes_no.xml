@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+            <Button
+                style="@style/YesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/module_y_btn"
+                android:text="@string/yes_button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"/>
+            <Button
+                style="@style/NoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/module_n_btn"
+                android:text="@string/no_button"
+                android:layout_toLeftOf="@id/module_y_btn"
+                android:layout_alignTop="@+id/module_y_btn"
+                android:layout_marginRight="13dp"/>
+</RelativeLayout>

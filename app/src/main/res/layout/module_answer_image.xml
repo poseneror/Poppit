@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+                <ProgressBar
+                    style="@style/MixedBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:id="@+id/li_y_bar"
+                    android:progress="50"
+                    android:max="100"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/question_fo_zoom"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+    <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/friends_text"
+                    android:id="@+id/li_q_answered_y"
+                    style="@style/PlainText"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_alignTop="@+id/li_q_answered_n"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/friends_text"
+                    android:id="@+id/li_q_answered_n"
+                    style="@style/PlainText"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_below="@+id/li_y_bar"
+                    android:layout_toLeftOf="@+id/li_n_percent"
+                    android:layout_toStartOf="@+id/li_n_percent" />
+
+                <TextView
+                    style="@style/PlainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="/"
+                    android:textSize="30dp"
+                    android:id="@+id/li_q_yes_no"
+                    android:textColor="@color/poppit_green"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_below="@+id/user_vote"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    style="@style/PlainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/your_answer_text"
+                    android:id="@+id/user_vote"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/li_second_option_image"
+                    android:layout_toRightOf="@+id/li_first_option_image"
+                    android:layout_toEndOf="@+id/li_first_option_image" />
+
+                <TextView
+                    style="@style/PlainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xx%"
+                    android:id="@+id/li_y_percent"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/li_y_bar"
+                    android:layout_toRightOf="@+id/li_q_answered_y"
+                    android:layout_toEndOf="@+id/li_q_answered_y" />
+
+                <TextView
+                    style="@style/PlainText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xx%"
+                    android:id="@+id/li_n_percent"
+                    android:gravity="center_vertical"
+                    android:layout_below="@+id/li_y_bar"
+                    android:layout_alignRight="@+id/li_y_bar"
+                    android:layout_alignEnd="@+id/li_y_bar" />
+
+    <com.parse.ParseImageView
+        style="@style/BorderImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bubble"
+        android:id="@+id/li_first_option_image"
+        android:layout_alignTop="@+id/user_vote"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop" />
+
+    <com.parse.ParseImageView
+        style="@style/BorderImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/bubble"
+        android:id="@+id/li_second_option_image"
+        android:layout_alignTop="@+id/li_first_option_image"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_fo_zoom"
+        android:src="@drawable/abc_ic_search_api_mtrl_alpha"
+        android:layout_below="@+id/li_first_option_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/li_first_option_image"
+        android:layout_alignEnd="@+id/li_first_option_image" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/question_so_zoom"
+        android:src="@drawable/abc_ic_search_api_mtrl_alpha"
+        android:layout_alignTop="@+id/question_fo_zoom"
+        android:layout_alignLeft="@+id/li_second_option_image"
+        android:layout_alignStart="@+id/li_second_option_image"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

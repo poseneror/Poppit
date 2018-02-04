@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/Feed"
+    android:id="@+id/feed_card">
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <include layout="@layout/feed_question" />
+        <include layout="@layout/module_answer_image"/>
+        <include layout="@layout/feed_extras" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

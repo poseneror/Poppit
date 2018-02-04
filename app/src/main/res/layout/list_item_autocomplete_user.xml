@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.facebook.login.widget.ProfilePictureView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/ac_profile_picture"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/UserName"
+        android:text="User Name"
+        android:id="@+id/ac_user_name"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ac_profile_picture"
+        android:layout_toEndOf="@+id/ac_profile_picture" />
+</RelativeLayout>

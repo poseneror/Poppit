@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog"
+    android:padding="15dp">
+
+    <com.parse.ParseImageView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:id="@+id/dialog_image"
+        android:src="@drawable/bubble"
+        style="@style/BorderImage"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/dialog_title"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ImageZoom"
+        android:id="@+id/dialog_title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/com_facebook_tooltip_black_xout"
+        android:id="@+id/dialog_close"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

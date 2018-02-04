@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="15dp"
+    android:background="#ffffff"
+    style="@style/Box">
+
+    <com.facebook.login.widget.ProfilePictureView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/li_q_profile_picture"
+        android:layout_marginRight="5dp">
+
+    </com.facebook.login.widget.ProfilePictureView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Publisher"
+        android:id="@+id/li_q_publisher"
+        android:layout_alignTop="@+id/li_q_profile_picture"
+        android:layout_toRightOf="@+id/li_q_profile_picture"
+        style="@style/UserName"
+        android:gravity="center_vertical" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_below="@+id/li_q_publisher"
+        android:layout_alignLeft="@+id/li_q_publisher"
+        android:layout_alignStart="@+id/li_q_publisher"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:hint="what would you ask?" />
+
+    <TextView
+        style="@style/PlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Who would you like to ask that?"
+        android:id="@+id/user_vote"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <AutoCompleteTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/li_q_friends_auto"
+        android:layout_below="@+id/user_vote"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Type in your friends names"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText" />
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:id="@+id/friends_grid"
+        android:layout_below="@+id/li_q_friends_auto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#eeeeee"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <Button
+        style="@style/InflateButton"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/li_q_inflate"
+        android:layout_below="@+id/friends_grid"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-15dp" />
+
+</RelativeLayout>

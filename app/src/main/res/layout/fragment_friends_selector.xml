@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp"
+    android:background="#ffffff"
+    style="@style/Box">
+
+    <TextView
+        style="@style/PlainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipients_hint"
+        android:id="@+id/who_text"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/friends_listView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/recipients_grid"
+        android:layout_below="@+id/who_text" />
+
+    <Button
+        style="@style/OptionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/continu_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/recipients_grid"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+    <!--
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/friends_search_text"
+            android:layout_below="@+id/who_text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/friends_listView"
+            android:layout_alignEnd="@+id/friends_listView" />
+            -->
+        <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/recipients_grid"
+        android:columnWidth="40dp"
+        android:numColumns="auto_fit"
+        android:horizontalSpacing="5dp"
+        android:stretchMode="columnWidth"
+            android:background="@color/background_material_light"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/continu_btn"
+            android:layout_toStartOf="@+id/continu_btn" />
+    </RelativeLayout>
